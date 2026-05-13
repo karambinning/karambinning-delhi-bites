@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delhi Bites · Old Delhi grill on Derby Square, Loughborough</title>
+<meta name="description" content="Delhi Bites — a tandoor-fired Old Delhi grill at 30 Derby Square, Loughborough LE11 5AL. Charcoal kebabs, curries and street bites to take away.">
+<meta name="theme-color" content="#161310">
+
+<!--
+  Build Jr · Delhi Bites · 2026-05-13
+  Direction: "Old Delhi at night" — charcoal-and-saffron, type-led, sign-painted.
+  Palette (INVENTED — research returned empty brand_colours · flag in handoff):
+    char #161310 · naan #F2E9D2 · saffron #E4A12B · coriander #5C7240 · chilli #B43A26
+  Type: Big Shoulders Display + Newsreader (no Inter / Roboto / Arial / Lato / Space Grotesk)
+  Verified data only:
+    address — 30 Derby Square, Loughborough LE11 5AL (brief)
+    lat/lon — 52.7724412 / -1.2081867 (brief, for static map)
+    facebook — facebook.com/delhibitesLe11 (research)
+    cuisine — Indian / grill / takeaway (Companies House SIC 56103 · research)
+  Omitted (unverified, would be fabrication):
+    phone · opening hours · menu items · prices · owner names · year established · reviews
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --char:#161310;
+    --char-2:#211c17;
+    --char-3:#2d2620;
+    --naan:#F2E9D2;
+    --naan-2:#E8DEC2;
+    --saffron:#E4A12B;
+    --saffron-d:#C58518;
+    --coriander:#5C7240;
+    --chilli:#B43A26;
+    --line:rgba(228,161,43,.22);
+    --line-soft:rgba(242,233,210,.12);
+    --rhythm:clamp(1rem,.85rem + .35vw,1.09rem);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;color-scheme:dark}
+  body{
+    background:var(--char);
+    color:var(--naan);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:var(--rhythm);
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:"Big Shoulders Display","Big Shoulders Display Fallback",Impact,sans-serif;
+    font-weight:900;
+    line-height:.92;
+    letter-spacing:.005em;
+    text-transform:uppercase;
+    text-wrap:balance;
+  }
+  p{text-wrap:pretty;hyphens:auto;max-width:62ch}
+  a{color:var(--saffron);text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .2s,color .2s}
+  a:hover{color:var(--naan);border-color:var(--naan)}
+
+  /* faint clay grain · pure CSS, no asset */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(1200px 600px at 12% -10%, rgba(228,161,43,.10), transparent 60%),
+      radial-gradient(900px 500px at 90% 110%, rgba(180,58,38,.08), transparent 60%);
+  }
+  header,main,footer{position:relative;z-index:1}
+
+  /* ── MARQUEE ── */
+  .tape{
+    background:var(--saffron);
+    color:var(--char);
+    border-top:1px solid var(--char);
+    border-bottom:1px solid var(--char);
+    overflow:hidden;
+    font-family:"Big Shoulders Display",Impact,sans-serif;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-size:clamp(.95rem,.8rem + .3vw,1.05rem);
+  }
+  .tape__track{
+    display:inline-flex;gap:2.5rem;
+    padding:.55rem 0;
+    white-space:nowrap;
+    animation:tape 32s linear infinite;
+    will-change:transform;
+  }
+  .tape__track span::after{content:"·";margin-left:2.5rem;color:var(--char-2)}
+  @keyframes tape{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){
+    .tape__track{animation:none;flex-wrap:wrap;white-space:normal;padding:.55rem 1rem}
+  }
+
+  /* ── NAV ── */
+  nav.top{
+    display:flex;align-items:baseline;justify-content:space-between;
+    padding:1.4rem clamp(1.2rem,4vw,3rem) 1rem;
+    gap:1.5rem;
+  }
+  .mark{
+    font-family:"Big Shoulders Display",Impact,sans-serif;
+    font-weight:700;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--naan);border:none;
+  }
+  .mark em{font-family:"Newsreader",serif;font-style:italic;font-weight:400;text-transform:lowercase;color:var(--saffron);margin-left:.25rem}
+  .nav-links{display:flex;gap:1.5rem;font-size:.95rem;letter-spacing:.02em}
+  .nav-links a{border:none;color:var(--naan-2)}
+  .nav-links a:hover{color:var(--saffron)}
+  @media (max-width:640px){.nav-links{gap:1rem;font-size:.85rem}}
+
+  /* ── WRAP ── */
+  .wrap{
+    max-width:1180px;margin:0 auto;
+    padding:0 clamp(1.2rem,4vw,3rem);
+  }
+  section{padding:clamp(3.5rem,8vw,7rem) 0}
+
+  /* ── HERO ── */
+  .hero{
+    padding:clamp(2rem,5vw,4rem) 0 clamp(4rem,9vw,7rem);
+    border-bottom:1px solid var(--line);
+  }
+  .hero__small{
+    font-family:"Newsreader",serif;font-style:italic;
+    color:var(--saffron);font-size:1.05rem;letter-spacing:.02em;
+    margin-bottom:1.25rem;
+  }
+  .hero h1{
+    font-size:clamp(4.5rem,17vw,15rem);
+    color:var(--naan);
+    letter-spacing:-.02em;
+    line-height:.86;
+    margin-bottom:.6rem;
+  }
+  .hero h1 .amp{display:block;color:var(--saffron);font-style:normal}
+  .hero__sub{
+    display:grid;grid-template-columns:1fr;gap:1.6rem;
+    margin-top:2rem;
+    border-top:1px solid var(--line);
+    padding-top:1.6rem;
+  }
+  @media (min-width:760px){
+    .hero__sub{grid-template-columns:1.4fr 1fr auto;align-items:start}
+  }
+  .hero__sub .addr{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:700;font-size:1.45rem;line-height:1.05;letter-spacing:.02em;text-transform:uppercase;color:var(--naan)}
+  .hero__sub .addr small{display:block;font-family:"Newsreader",serif;font-style:italic;text-transform:none;color:var(--naan-2);font-weight:400;font-size:.95rem;letter-spacing:0;margin-top:.4rem}
+  .hero__sub p.lede{color:var(--naan-2);font-size:1.05rem}
+  .hero__sub .cta{
+    align-self:end;
+    font-family:"Big Shoulders Display",Impact,sans-serif;
+    font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+    font-size:1rem;
+    color:var(--char);background:var(--saffron);
+    padding:.85rem 1.4rem;border:none;
+    display:inline-block;white-space:nowrap;
+    transition:background .2s,color .2s;
+  }
+  .hero__sub .cta:hover{background:var(--naan);color:var(--char)}
+
+  /* ── KITCHEN / what we make ── */
+  .kitchen{background:var(--naan);color:var(--char);position:relative}
+  .kitchen .wrap{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start}
+  @media (min-width:820px){.kitchen .wrap{grid-template-columns:.7fr 1fr;gap:4rem}}
+  .kitchen h2{color:var(--char);font-size:clamp(2.5rem,6vw,4.2rem);letter-spacing:-.005em}
+  .kitchen h2 i{font-family:"Newsreader",serif;font-style:italic;font-weight:400;color:var(--chilli);text-transform:lowercase;letter-spacing:0}
+  .kitchen p{color:var(--char-2);font-size:1.1rem;line-height:1.55}
+  .kitchen p + p{margin-top:1rem}
+  .kitchen .pull{
+    display:inline-block;
+    font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:700;
+    letter-spacing:.04em;text-transform:uppercase;font-size:.85rem;
+    background:var(--char);color:var(--saffron);padding:.4rem .7rem;
+    margin-bottom:1.5rem;
+  }
+
+  /* ── TANDOOR INSET ── */
+  .tandoor{
+    background:var(--char-2);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  @property --grad-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
+  .tandoor::before{
+    content:"";position:absolute;inset:-30%;
+    background:conic-gradient(from var(--grad-angle), transparent 0deg, rgba(228,161,43,.18) 60deg, transparent 120deg, transparent 240deg, rgba(180,58,38,.12) 300deg, transparent 360deg);
+    animation:spin 28s linear infinite;
+    pointer-events:none;z-index:0;
+  }
+  @keyframes spin{to{--grad-angle:360deg}}
+  @media (prefers-reduced-motion:reduce){.tandoor::before{animation:none}}
+  .tandoor .wrap{position:relative;z-index:1;text-align:center;display:grid;gap:1.2rem;place-items:center}
+  .tandoor h2{font-size:clamp(2.2rem,7vw,5rem);color:var(--saffron)}
+  .tandoor p{color:var(--naan-2);max-width:48ch;margin:0 auto;font-size:1.05rem}
+  .tandoor .stamp{
+    font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:700;
+    letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;color:var(--coriander);
+    border:1px solid var(--coriander);padding:.35rem .8rem;
+    display:inline-block;
+  }
+
+  /* ── MENU ── */
+  .menu h2{
+    font-size:clamp(2.5rem,7vw,5rem);
+    color:var(--naan);
+    margin-bottom:.6rem;
+  }
+  .menu .preamble{
+    color:var(--naan-2);max-width:54ch;margin-bottom:3rem;font-size:1.05rem;
+    border-left:2px solid var(--saffron);padding-left:1rem;
+  }
+  .menu .preamble em{color:var(--saffron)}
+  .menu__grid{
+    display:grid;gap:1.5rem 2rem;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:720px){.menu__grid{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1080px){.menu__grid{grid-template-columns:repeat(3,1fr)}}
+  .card{
+    border-top:1px solid var(--line);
+    padding:1.5rem 0 1.8rem;
+    position:relative;
+  }
+  .card__num{
+    font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:500;
+    color:var(--coriander);font-size:.85rem;letter-spacing:.2em;
+    position:absolute;top:1.5rem;right:0;
+  }
+  .card h3{
+    font-size:clamp(1.6rem,2.6vw,2.1rem);
+    color:var(--naan);
+    margin-bottom:.5rem;
+  }
+  .card h3 b{color:var(--saffron);font-weight:inherit}
+  .card p{
+    font-family:"Newsreader",serif;font-style:italic;font-weight:400;
+    color:var(--naan-2);font-size:1rem;line-height:1.5;
+  }
+  @supports (animation-timeline:view()){
+    .card{
+      animation:rise both;
+      animation-timeline:view();
+      animation-range:entry 0% cover 28%;
+    }
+    @keyframes rise{
+      from{opacity:0;transform:translateY(1.5rem)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  }
+
+  .menu__note{
+    margin-top:3rem;
+    padding:1.5rem 1.6rem;
+    background:var(--char-2);
+    border-left:3px solid var(--chilli);
+    color:var(--naan-2);
+    font-style:italic;
+    font-size:1rem;
+    max-width:60ch;
+  }
+  .menu__note strong{
+    display:block;
+    font-family:"Big Shoulders Display",Impact,sans-serif;font-style:normal;
+    font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--chilli);font-size:.85rem;margin-bottom:.35rem;
+  }
+
+  /* ── FIND US ── */
+  .find{background:var(--naan);color:var(--char);position:relative}
+  .find .wrap{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+  @media (min-width:820px){.find .wrap{grid-template-columns:1fr 1fr;gap:4rem}}
+  .find h2{color:var(--char);font-size:clamp(2.4rem,6.5vw,4.5rem)}
+  .find h2 i{font-family:"Newsreader",serif;font-style:italic;font-weight:400;color:var(--chilli);text-transform:lowercase}
+  .find .addr-big{
+    font-family:"Big Shoulders Display",Impact,sans-serif;
+    font-weight:700;
+    font-size:clamp(1.6rem,2.6vw,2.2rem);
+    text-transform:uppercase;letter-spacing:.02em;line-height:1.05;
+    color:var(--char);margin-top:1.2rem;
+  }
+  .find .addr-big small{display:block;font-family:"Newsreader",serif;font-style:italic;text-transform:none;color:var(--char-3);font-weight:400;font-size:1rem;letter-spacing:0;margin-top:.6rem;line-height:1.4}
+  .find .links{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+  .find .links a{
+    font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:700;
+    letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;
+    background:var(--char);color:var(--saffron);
+    padding:.7rem 1.1rem;border:none;
+    transition:background .2s,color .2s;
+  }
+  .find .links a:hover{background:var(--chilli);color:var(--naan)}
+  .find .map{
+    aspect-ratio:5/4;
+    border:1px solid var(--char-3);
+    background:var(--char);
+    overflow:hidden;
+  }
+  .find .map img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(.95) saturate(.85)}
+
+  /* ── FOOTER ── */
+  footer{
+    background:var(--char);
+    border-top:1px solid var(--line);
+    padding:3rem 0 4rem;
+  }
+  footer .wrap{
+    display:grid;grid-template-columns:1fr;gap:2rem;
+    align-items:end;
+  }
+  @media (min-width:760px){footer .wrap{grid-template-columns:1.4fr 1fr;gap:3rem}}
+  footer h3{
+    font-size:clamp(2rem,4.5vw,3.3rem);
+    color:var(--naan);letter-spacing:.005em;
+    margin-bottom:.4rem;
+  }
+  footer h3 i{font-family:"Newsreader",serif;font-style:italic;font-weight:400;color:var(--saffron);text-transform:lowercase}
+  footer .letterhead{
+    font-family:"Newsreader",serif;font-style:italic;
+    color:var(--naan-2);font-size:1.02rem;line-height:1.7;
+  }
+  footer .letterhead span{display:block}
+  footer .meta{
+    font-family:"Big Shoulders Display",Impact,sans-serif;
+    font-weight:500;font-size:.78rem;letter-spacing:.18em;
+    color:var(--coriander);text-transform:uppercase;
+    border-top:1px solid var(--line-soft);padding-top:1.2rem;margin-top:2rem;
+  }
+
+  ::selection{background:var(--saffron);color:var(--char)}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="top">
+    <a href="#top" class="mark">Delhi Bites<em>·grill</em></a>
+    <div class="nav-links">
+      <a href="#kitchen">Kitchen</a>
+      <a href="#menu">Menu</a>
+      <a href="#find">Find us</a>
+    </div>
+  </nav>
+
+  <div class="tape" aria-hidden="true">
+    <div class="tape__track">
+      <span>Tandoor lit nightly</span>
+      <span>Charcoal grills</span>
+      <span>Old Delhi flavours</span>
+      <span>Derby Square · Loughborough</span>
+      <span>Walk in or take away</span>
+      <span>Tandoor lit nightly</span>
+      <span>Charcoal grills</span>
+      <span>Old Delhi flavours</span>
+      <span>Derby Square · Loughborough</span>
+      <span>Walk in or take away</span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__small">Tandoor &amp; charcoal grill — Derby Square, Loughborough</div>
+      <h1>Delhi<span class="amp">Bites</span></h1>
+
+      <div class="hero__sub">
+        <p class="lede">A small Old-Delhi-leaning kitchen on Derby Square. We cook on charcoal, season by hand, and pack everything to walk out the door warm.</p>
+        <div class="addr">
+          30 Derby Square
+          <small>Loughborough LE11 5AL</small>
+        </div>
+        <a class="cta" href="#find" aria-label="See find us section">Find us →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="kitchen" id="kitchen">
+    <div class="wrap">
+      <div>
+        <span class="pull">The kitchen</span>
+        <h2>Small kitchen, <i>big tandoor.</i></h2>
+      </div>
+      <div>
+        <p>Delhi Bites is a takeaway kitchen with one job: turn out unpretentious, properly spiced North-Indian food, cooked to order. Tandoori breads pulled from the oven by hand. Marinades that sit overnight. Curries built from a base gravy that smells like the kitchen door at a wedding.</p>
+        <p>The menu changes around what's good. We keep the list short because we'd rather get a handful of dishes right than promise everything. Walk in, look up at the board, ask what's good tonight.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tandoor" aria-label="Tandoor">
+    <div class="wrap">
+      <span class="stamp">Charcoal · clay · 480°C</span>
+      <h2>Lit at four. Hot by five.</h2>
+      <p>The tandoor is the centre of the kitchen — a clay belly fired with charcoal until the walls glow. Breads are slapped to the inside and pulled out blistered; skewers go down through the top, smoking as they cook.</p>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <h2>What's on the board</h2>
+      <p class="preamble">A short, honest list of what the kitchen makes most nights. <em>The full menu lives in-store</em> — prices, specials and what's just come off the grill change with the week. Ring the bell, ask the counter.</p>
+
+      <div class="menu__grid">
+
+        <article class="card">
+          <span class="card__num">01</span>
+          <h3>From the <b>tandoor</b></h3>
+          <p>Marinated chicken, lamb and paneer cooked on skewers in the clay oven. Naans, kulchas and rotis pulled hot to order.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__num">02</span>
+          <h3>Curries &amp; <b>gravies</b></h3>
+          <p>House gravy built slow — onion, tomato, ginger, garam masala — finished into whatever the night calls for. Mild through to chilli-forward.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__num">03</span>
+          <h3>Old Delhi <b>street bites</b></h3>
+          <p>Small plates from the city's lanes — chaats, samosas, kebabs that travel. Built for sharing or eating one-handed on the walk home.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__num">04</span>
+          <h3>Rice, breads &amp; <b>sides</b></h3>
+          <p>Basmati cooked plain or biryani-style with whole spice. Hand-rolled breads. Pickles, raita, salad — the supporting cast that holds the meal together.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__num">05</span>
+          <h3>Sweet &amp; <b>finishing</b></h3>
+          <p>A small handful of after — gulab jamun warm in syrup, kheer when it's on, kulfi from the freezer. Chai by the cup if you're staying a minute.</p>
+        </article>
+
+        <article class="card">
+          <span class="card__num">06</span>
+          <h3>Vegetarian, <b>by default</b></h3>
+          <p>Half the menu is meatless by tradition, not by trend — dals, paneer, chana, aloo. Tell us if you need dairy- or gluten-aware and we'll point you to what works.</p>
+        </article>
+
+      </div>
+
+      <div class="menu__note">
+        <strong>A note on this page</strong>
+        We haven't listed dishes and prices here because they shift weekly and we'd rather you saw the real board than a website out of date. Pop in, or message the Facebook page below — that's where the kitchen posts what's on.
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="wrap">
+      <div>
+        <h2>Find us <i>on Derby Square.</i></h2>
+        <p style="color:var(--char-2);margin-top:.8rem;max-width:40ch">Tucked into the row of independents off the square — five minutes from the town centre, opposite the green.</p>
+        <p class="addr-big">
+          30 Derby Square
+          <small>Loughborough LE11 5AL · Leicestershire</small>
+        </p>
+        <div class="links">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=30+Derby+Square+Loughborough+LE11+5AL" target="_blank" rel="noopener">Directions ↗</a>
+          <a href="https://www.facebook.com/delhibitesLe11/" target="_blank" rel="noopener">Facebook ↗</a>
+        </div>
+      </div>
+      <div class="map" aria-label="Map of Delhi Bites at 30 Derby Square Loughborough">
+        <a href="https://www.openstreetmap.org/?mlat=52.7724412&mlon=-1.2081867&zoom=18" target="_blank" rel="noopener" style="border:none;display:block;height:100%">
+          <img alt="Map showing 30 Derby Square Loughborough LE11 5AL"
+               src="https://staticmap.openstreetmap.de/staticmap.php?center=52.7724412,-1.2081867&zoom=17&size=720x576&maptype=mapnik&markers=52.7724412,-1.2081867,red-pushpin"
+               loading="lazy">
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Delhi Bites, <i>Loughborough.</i></h3>
+      <p class="letterhead">
+        <span>30 Derby Square</span>
+        <span>Loughborough · LE11 5AL</span>
+        <span>Leicestershire</span>
+      </p>
+    </div>
+    <div>
+      <p class="letterhead">
+        <span><a href="https://www.facebook.com/delhibitesLe11/" target="_blank" rel="noopener">facebook.com/delhibitesLe11</a></span>
+        <span>For tonight's board &amp; specials, the Facebook page is where the kitchen posts.</span>
+      </p>
+      <p class="meta">Tandoor · charcoal grill · takeaway</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
